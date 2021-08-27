@@ -18,6 +18,7 @@ struct PickerWithBindingView: View {
                         .tag($0)
                 }
             }
+            .accessibilityIdentifier("select item")
             .padding()
         }
         Text("Selected: \(viewModel.selectedItem.title)")

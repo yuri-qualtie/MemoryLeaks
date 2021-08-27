@@ -26,5 +26,8 @@ struct NameView: View {
         Button("Change Name") {
             name = "Bob"
         }
+        Button("Revert Name") {
+            name = "Alice"
+        }
     }
 }

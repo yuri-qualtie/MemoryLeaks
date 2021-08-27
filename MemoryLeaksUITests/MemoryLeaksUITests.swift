@@ -38,6 +38,7 @@ class MemoryLeaksUITests: XCTestCase {
             app.staticTexts["Name is Alice"].waitToAppear()
             app.buttons["Change Name"].click()
             app.staticTexts["Name is Bob"].waitToAppear()
+            app.buttons["Revert Name"].click()
             
             app.buttons["Back"].click()
         }

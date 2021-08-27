@@ -20,6 +20,9 @@
 		DA76DEC326D8F140007BDF17 /* PickerWithBindingViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA76DEC226D8F140007BDF17 /* PickerWithBindingViewModel.swift */; };
 		DA76DEC526D8F155007BDF17 /* PickerWithBindingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA76DEC426D8F155007BDF17 /* PickerWithBindingView.swift */; };
 		DA76DEC726D8F1A3007BDF17 /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA76DEC626D8F1A3007BDF17 /* Item.swift */; };
+		DA76DEC926D8FE53007BDF17 /* NestedPublishedViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA76DEC826D8FE53007BDF17 /* NestedPublishedViewModel.swift */; };
+		DA76DECC26D90197007BDF17 /* NestedPublishedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA76DECB26D90197007BDF17 /* NestedPublishedView.swift */; };
+		DA76DECE26D901DF007BDF17 /* SelectionModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA76DECD26D901DF007BDF17 /* SelectionModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -60,6 +63,9 @@
 		DA76DEC226D8F140007BDF17 /* PickerWithBindingViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PickerWithBindingViewModel.swift; sourceTree = "<group>"; };
 		DA76DEC426D8F155007BDF17 /* PickerWithBindingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PickerWithBindingView.swift; sourceTree = "<group>"; };
 		DA76DEC626D8F1A3007BDF17 /* Item.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Item.swift; sourceTree = "<group>"; };
+		DA76DEC826D8FE53007BDF17 /* NestedPublishedViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NestedPublishedViewModel.swift; sourceTree = "<group>"; };
+		DA76DECB26D90197007BDF17 /* NestedPublishedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NestedPublishedView.swift; sourceTree = "<group>"; };
+		DA76DECD26D901DF007BDF17 /* SelectionModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectionModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -117,6 +123,7 @@
 				DA76DEC626D8F1A3007BDF17 /* Item.swift */,
 				DA76DEBA26D8EF33007BDF17 /* Selection */,
 				DA76DEC126D8F0EA007BDF17 /* PickerWithBinding */,
+				DA76DECA26D8FE61007BDF17 /* NestedPublished */,
 				DA76DE8E26D8ECAE007BDF17 /* Assets.xcassets */,
 				DA76DE9326D8ECAE007BDF17 /* Info.plist */,
 				DA76DE9426D8ECAE007BDF17 /* MemoryLeaks.entitlements */,
@@ -167,6 +174,16 @@
 				DA76DEC426D8F155007BDF17 /* PickerWithBindingView.swift */,
 			);
 			path = PickerWithBinding;
+			sourceTree = "<group>";
+		};
+		DA76DECA26D8FE61007BDF17 /* NestedPublished */ = {
+			isa = PBXGroup;
+			children = (
+				DA76DEC826D8FE53007BDF17 /* NestedPublishedViewModel.swift */,
+				DA76DECB26D90197007BDF17 /* NestedPublishedView.swift */,
+				DA76DECD26D901DF007BDF17 /* SelectionModel.swift */,
+			);
+			name = NestedPublished;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -299,6 +316,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				DA76DEB926D8ED44007BDF17 /* AppRouter.swift in Sources */,
+				DA76DECC26D90197007BDF17 /* NestedPublishedView.swift in Sources */,
 				DA76DEC726D8F1A3007BDF17 /* Item.swift in Sources */,
 				DA76DEB726D8ED10007BDF17 /* AppState.swift in Sources */,
 				DA76DE8D26D8ECAC007BDF17 /* MainView.swift in Sources */,
@@ -306,6 +324,8 @@
 				DA76DE8B26D8ECAC007BDF17 /* MemoryLeaksApp.swift in Sources */,
 				DA76DEC026D8EF90007BDF17 /* SelectionView.swift in Sources */,
 				DA76DEC526D8F155007BDF17 /* PickerWithBindingView.swift in Sources */,
+				DA76DEC926D8FE53007BDF17 /* NestedPublishedViewModel.swift in Sources */,
+				DA76DECE26D901DF007BDF17 /* SelectionModel.swift in Sources */,
 				DA76DEC326D8F140007BDF17 /* PickerWithBindingViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -10,12 +10,16 @@ import SwiftUI
 struct MainView: View {
     @ObservedObject var router: AppRouter
     
+    @State var selection = SelectionModel()
+    
     var body: some View {
         switch(router.state) {
         case .selection:
             SelectionView(viewModel: .init())
         case .pickerWithBinding:
             PickerWithBindingView(viewModel: .init())
+        case .nestedPublished:
+            NestedPublishedView(viewModel: .init(selection: selection))
         }
     }
 }

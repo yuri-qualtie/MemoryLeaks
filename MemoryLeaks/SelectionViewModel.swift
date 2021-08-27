@@ -11,4 +11,7 @@ class SelectionViewModel: ObservableObject {
     func handlePickerWithBinding() {
         AppRouter.shared.state = .pickerWithBinding
     }
+    func handleNestedPublished() {
+        AppRouter.shared.state = .nestedPublished
+    }
 }

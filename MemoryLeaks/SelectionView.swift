@@ -13,6 +13,7 @@ struct SelectionView: View {
     var body: some View {
         VStack {
             Button("Picker with Binding", action: viewModel.handlePickerWithBinding)
+            Button("Nested Published", action: viewModel.handleNestedPublished)
         }
     }
 }

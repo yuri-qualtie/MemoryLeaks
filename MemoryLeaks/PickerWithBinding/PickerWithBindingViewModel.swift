@@ -13,6 +13,6 @@ class PickerWithBindingViewModel: ObservableObject {
     @Published var selectedItem: Item = Item.all.first!
     
     func handleBack() {
-        AppRouter.shared.state = .selection
+        AppRouter.shared.route(to: .selection)
     }
 }

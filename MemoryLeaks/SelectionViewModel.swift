@@ -9,9 +9,9 @@ import Foundation
 
 class SelectionViewModel: ObservableObject {
     func handlePickerWithBinding() {
-        AppRouter.shared.state = .pickerWithBinding
+        AppRouter.shared.route(to: .pickerWithBinding)
     }
     func handleNestedPublished() {
-        AppRouter.shared.state = .nestedPublished
+        AppRouter.shared.route(to: .nestedPublished)
     }
 }

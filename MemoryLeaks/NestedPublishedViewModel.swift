@@ -15,6 +15,6 @@ class NestedPublishedViewModel: ObservableObject {
     }
     
     func handleBack() {
-        AppRouter.shared.state = .selection
+        AppRouter.shared.route(to: .selection)
     }
 }

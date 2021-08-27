@@ -7,6 +7,6 @@
 
 import Foundation
 
-class SelectionModel: ObservableObject {
+class NameModel: ObservableObject {
     @Published var name: String = "Alice"
 }

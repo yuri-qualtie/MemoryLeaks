@@ -10,7 +10,7 @@ import SwiftUI
 struct MainView: View {
     @ObservedObject var router: AppRouter
     
-    @State var selection = SelectionModel()
+    @State var selection = NameModel()
     
     var body: some View {
         switch(router.state) {

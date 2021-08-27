@@ -30,6 +30,20 @@ class MemoryLeaksUITests: XCTestCase {
         
         print("put breakpoint here to debug memory graph")
     }
+    
+    func testNestedPublished() throws {
+        for _ in 1...3 {
+            app.buttons["Nested Published"].click()
+            
+            app.staticTexts["Name is Alice"].waitToAppear()
+            app.buttons["Change Name"].click()
+            app.staticTexts["Name is Bob"].waitToAppear()
+            
+            app.buttons["Back"].click()
+        }
+        
+        print("put breakpoint here to debug memory graph")
+    }
 }
 
 extension XCUIElement {

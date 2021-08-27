@@ -8,9 +8,9 @@
 import Foundation
 
 class NestedPublishedViewModel: ObservableObject {
-    @Published var selection: SelectionModel
+    @Published var selection: NameModel
     
-    init(selection: SelectionModel) {
+    init(selection: NameModel) {
         self.selection = selection
     }
     

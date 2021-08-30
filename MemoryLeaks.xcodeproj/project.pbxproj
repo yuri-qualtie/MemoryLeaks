@@ -23,6 +23,7 @@
 		DA76DEC926D8FE53007BDF17 /* NestedPublishedViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA76DEC826D8FE53007BDF17 /* NestedPublishedViewModel.swift */; };
 		DA76DECC26D90197007BDF17 /* NestedPublishedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA76DECB26D90197007BDF17 /* NestedPublishedView.swift */; };
 		DA76DECE26D901DF007BDF17 /* NameModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA76DECD26D901DF007BDF17 /* NameModel.swift */; };
+		DAB7D3BB26DD17C20034D60C /* ContainerAccessibility.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAB7D3BA26DD17C20034D60C /* ContainerAccessibility.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -66,6 +67,7 @@
 		DA76DEC826D8FE53007BDF17 /* NestedPublishedViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NestedPublishedViewModel.swift; sourceTree = "<group>"; };
 		DA76DECB26D90197007BDF17 /* NestedPublishedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NestedPublishedView.swift; sourceTree = "<group>"; };
 		DA76DECD26D901DF007BDF17 /* NameModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NameModel.swift; sourceTree = "<group>"; };
+		DAB7D3BA26DD17C20034D60C /* ContainerAccessibility.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContainerAccessibility.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -128,6 +130,7 @@
 				DA76DE9326D8ECAE007BDF17 /* Info.plist */,
 				DA76DE9426D8ECAE007BDF17 /* MemoryLeaks.entitlements */,
 				DA76DE9026D8ECAE007BDF17 /* Preview Content */,
+				DAB7D3BA26DD17C20034D60C /* ContainerAccessibility.swift */,
 			);
 			path = MemoryLeaks;
 			sourceTree = "<group>";
@@ -323,6 +326,7 @@
 				DA76DEBC26D8EF6B007BDF17 /* SelectionViewModel.swift in Sources */,
 				DA76DE8B26D8ECAC007BDF17 /* MemoryLeaksApp.swift in Sources */,
 				DA76DEC026D8EF90007BDF17 /* SelectionView.swift in Sources */,
+				DAB7D3BB26DD17C20034D60C /* ContainerAccessibility.swift in Sources */,
 				DA76DEC526D8F155007BDF17 /* PickerWithBindingView.swift in Sources */,
 				DA76DEC926D8FE53007BDF17 /* NestedPublishedViewModel.swift in Sources */,
 				DA76DECE26D901DF007BDF17 /* NameModel.swift in Sources */,

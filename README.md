@@ -1,4 +1,6 @@
 # MemoryLeaks
+
+## Description of issue
 Sample project to demonstrate that `.accessibilityElement(children: .contain)` recommended by [Apple](https://developer.apple.com/documentation/swiftui/accessibilitychildbehavior/contain) produces objects that are leaked in UITest
 
 We introduced view modifier `containerAccessibility(identifier: String)` to add accesability to containers such as VStack and HStacks.
@@ -49,3 +51,17 @@ We applied `.containerAccessibility` to each view. In `MemoryLeaksUITests::testP
 <img width="1070" alt="Leak2" src="https://user-images.githubusercontent.com/70205509/131563175-c3002de3-c120-4986-b916-41be4291b221.png">
 
 
+## Steps to reproduce:
+
+1. Open Project
+2. Navigate to MemoryLeaksUITests
+3. Put breakpoint on line 31 - `print("put breakpoint here to debug memory graph")`
+4. Run `testPickerWithBinding()`
+5. Wait until breapoint is triggered
+6. Select MemoryLeaks app in Debug
+7. Click Debug Memory Graph
+8. Inspect objects
+
+Actual: We see 3 instances of PickerWithBindingViewModel that are leaked by UITests
+Expected: All instnaces of PickerWithBindingViewModel should be deaclocated when PickerWithBindingView is disappeared.
+Note: The issue disappears if navigate to MainView.swift, comment line 22 - `.containerAccessibility(identifier: "picker-with-binding-view")` and do steps 2-8

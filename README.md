@@ -3,7 +3,7 @@
 ## Description of issue
 Sample project to demonstrate that `.accessibilityElement(children: .contain)` recommended by [Apple](https://developer.apple.com/documentation/swiftui/accessibilitychildbehavior/contain) produces objects that are leaked in UITest
 
-We introduced view modifier `containerAccessibility(identifier: String)` to add accesability to containers such as VStack and HStacks.
+We introduced view modifier `containerAccessibility(identifier: String)` to add accesibility to containers such as VStack and HStacks.
 ```
 struct ContainerAccessibility: ViewModifier {
     let identifier: String
@@ -45,7 +45,7 @@ struct MainView: View {
 }
 ```
 
-We applied `.containerAccessibility` to each view. In `MemoryLeaksUITests::testPickerWithBinding` we do navigation between Selection and PickerWithBindingView several times and expect that all the instances of `PickerWithBindingViewModel` is dealocated at the end of the tests but they are accumulated and is not released:
+We applied `.containerAccessibility` to each view. In this project `MemoryLeaksUITests::testPickerWithBinding` we do navigation between Selection and PickerWithBindingView several times and expect that all the instances of `PickerWithBindingViewModel` are deallocated at the end of the tests but they accumulate and are not released:
 
 <img width="323" alt="Leak-1" src="https://user-images.githubusercontent.com/70205509/131562842-8fc0430f-7440-4197-90fd-8ce754f070bf.png">
 <img width="1070" alt="Leak2" src="https://user-images.githubusercontent.com/70205509/131563175-c3002de3-c120-4986-b916-41be4291b221.png">
@@ -63,5 +63,5 @@ We applied `.containerAccessibility` to each view. In `MemoryLeaksUITests::testP
 8. Inspect objects
 
 Actual: We see 3 instances of PickerWithBindingViewModel that are leaked by UITests
-Expected: All instnaces of PickerWithBindingViewModel should be deaclocated when PickerWithBindingView is disappeared.
-Note: The issue disappears if navigate to MainView.swift, comment line 22 - `.containerAccessibility(identifier: "picker-with-binding-view")` and do steps 2-8
+Expected: All instances of PickerWithBindingViewModel should be deallocated when PickerWithBindingView disappears.
+Note: The issue disappears if we comment line 22 `.containerAccessibility(identifier: "picker-with-binding-view")` in MainView.swift -  and repeat steps 2-8

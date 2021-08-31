@@ -62,6 +62,6 @@ We applied `.containerAccessibility` to each view. In this project `MemoryLeaksU
 7. Click Debug Memory Graph
 8. Inspect objects
 
-Actual: We see 3 instances of PickerWithBindingViewModel that are leaked by UITests
-Expected: All instances of PickerWithBindingViewModel should be deallocated when PickerWithBindingView disappears.
-Note: The issue disappears if we comment line 22 `.containerAccessibility(identifier: "picker-with-binding-view")` in MainView.swift -  and repeat steps 2-8
+**Actual:** We see 3 instances of PickerWithBindingViewModel that are leaked by UITests  
+**Expected:** All instances of PickerWithBindingViewModel should be deallocated when PickerWithBindingView disappears.  
+**Note:** The issue disappears if we comment line 22 `.containerAccessibility(identifier: "picker-with-binding-view")` in MainView.swift -  and repeat steps 2-8

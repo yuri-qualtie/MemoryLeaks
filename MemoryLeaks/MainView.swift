@@ -16,13 +16,10 @@ struct MainView: View {
         switch(router.state) {
         case .selection:
             SelectionView(viewModel: .init())
-                .containerAccessibility(identifier: "selection-view")
         case .pickerWithBinding:
             PickerWithBindingView(viewModel: .init())
-                .containerAccessibility(identifier: "picker-with-binding-view")
         case .nestedPublished:
             NestedPublishedView(viewModel: .init(selection: selection))
-                .containerAccessibility(identifier: "nested-published-view")
         }
     }
 }
